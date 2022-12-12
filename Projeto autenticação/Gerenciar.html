@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css" />
+    <title>Gerenciar</title>
+    
+    <style>
+       #listaRegistros{display: none;}
+        #CadastroRegistro{
+            display: none;
+            flex-direction: column;
+            gap:10px;
+        }
+
+        body[page=lista] #listaRegistros{ 
+            display: block;
+        }
+        body[page=cadastro] #CadastroRegistro{ 
+            display: block;
+        }
+        table{
+            width: 100%;
+            border-collapse: collapse;
+        }
+        table th,
+        table td{
+            font-size: 14px;
+            padding: 10px 15px;
+            border: solid 1px black;
+        }
+
+        input{
+            border: solid 1px;
+            border-radius: 4px;
+        }
+        .label>div{
+            display: flex;
+        }
+        .label>div>input{
+            flex:1;
+        }
+        button.vermelho{
+            background-color:rgb(227, 85, 85);
+            font-size: large;
+            cursor: pointer;
+        }
+        button.verde{
+            background-color:rgb(10, 238, 10);
+            font-size: large;
+            cursor: pointer;
+            
+        }
+
+    </style>
+</head>
+<section>
+    <h1 class="logado" id="logado"></h1>
+</section> <br>
+<button class="sair" onclick="sair()">
+    Sair
+</button>
+<body page='lista' class="bodyGerenciar">
+   
+    <header class="cabecalhoGerenciar">
+        <h1 class="gerenciamento">Gerenciamento</h1>
+    </header>
+    <main>
+        <h2 class="h2Ponto">Campanhas Cadastradas:</h2><br>    
+
+        <div id="listaRegistros">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Nome da Campanha</th>
+                        <!--<th>Usuário</th>
+                        <th>Fone</th>-->
+                        <th>Editar ou Deletar</th> 
+                    </tr>
+
+                </thead>
+                <tbody id="listaRegistrosBody"></tbody>
+
+            </table>
+
+            <!--<div>
+                <button onclick="visualizar('cadastro')">Novo</button>
+            </div>-->
+
+        </div>
+        <!--
+        <form id="CadastroRegistro">
+
+            <div class="label">
+                <div>ID</div>
+                <div>
+                    <input type="number" readonly id="id"/>
+                </div>
+
+            </div>
+
+            <div class="label">
+                <div>Nome</div>
+                <div>
+                    <input id="nome" />
+                </div>
+            </div>
+
+            
+            <div class="label">
+                <div>Fone</div>
+                <div>
+                    <input type="tel" id="fone" />
+                </div>
+            </div>
+
+            <div>
+                <button>Salvar</button>
+                <button onclick="visualizar('lista')" class="cinza" type="button">Cancelar</button>
+            </div>
+
+        </form>-->
+   
+         <section class="linkA">
+            <a class="nova"  href="CadastroCampanha.html">Adicionar Nova Campanha - (Clique aqui)</a>
+        </section>
+
+        <h2 class="h2Doacao">Doações Recebidas:</h2><br>
+        <div id="listaRegistros2">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Doações</th>
+                        <!--<th>Usuário</th>
+                        <th>Fone</th>-->
+                        <!-- <th>Detalhes da Doação</th>  -->
+                    </tr>
+
+                </thead>
+                <tbody id="listaRegistrosBody2"></tbody>
+
+            </table>
+
+            <!--<div>
+                <button onclick="visualizar('cadastro')">Novo</button>
+            </div>-->
+
+        </div>
+        </section>
+        
+        <section>
+         
+
+        </section>
+      
+    
+        
+        <script src="Gerenciar.js"></script>
+       
+    </main>
+    
+</body>
+</html>
+

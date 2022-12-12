@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"> 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.1.2/axios.min.js"></script>
+    <script>
+        const http = axios.create({
+            baseURL: 'http://joao92-001-site1.btempurl.com/',
+            timeout: 1000
+        });
+    </script>
+</head>
+<body>
+   
+    <main class="container">
+        <section class="card">
+           <h1>Cadastrar Campanha</h1>
+           <section id="msgError"></section>
+           <section id="msgSuccess"></section>
+
+
+           <section class="label-float">
+            <input type="text" id="NomeDaOng" placeholder=""required>
+            <label id="labelNomeDaOng" for="NomeDaOng">Nome Da Ong</label>
+            </section>
+            <section class="label-float">
+                <input type="text" id="NomeDaCampanha" placeholder="" required>
+                <label id="labelNomeDaCampanha" for="NomeDaCampanha">Nome da Campanha</label>
+            </section>
+
+           <section class="label-float">
+            <input type="text" id="descricaoDaCampanha" placeholder=""required>
+            <label id="labeldescricaoDaCampanha" for="descricaoDaCampanha">Descrição da Campanha - (Detalhe informações sobre a campanha)</label>
+            </section>
+
+          
+
+            <section class="label-float">
+                <input type="number" id="Telefone" placeholder=""required>
+                <label id="labelusuario" for="Telefone">Telefone</label>
+            </section>
+
+            <section class="label-float">
+                <input type="email" id="Email" placeholder=""required>
+                <label id="labelusuario" for="Email">E-mail</label>
+            </section>
+
+            <section class="label-float">
+                <input type="text" id="Endereco" placeholder=""required>
+                <label id="labelusuario" for="Endereco">Endereço</label>
+            </section>
+
+            <section class="label-float">
+                <input type="text" id="cidade" placeholder=""required>
+                <label id="labelusuario" for="cidade">Cidade</label>
+            </section>
+
+            <section class="label-float">
+                <input type="text" id="Estado" placeholder=""required>
+                <label id="labelusuario" for="Estado">Estado</label>
+            </section>
+
+            <section class="label-float">
+                <input type="text" id="Pais" placeholder=""required>
+                <label id="labelusuario" for="Pais">Pais</label>
+            </section>
+
+            <section class="label-float">
+                <input type="text" id="Pix" placeholder=""required>
+                <label id="labelusuario" for="Pix">Aceita Pix?</label>
+            </section>
+            <section class="label-float">
+                <input type="text" id="CartaoDeCredito" placeholder=""required>
+                <label id="labelCartaoDeCredito" for="Pais">Aceita Cartão de Crédito?</label>
+            </section>
+            <section class="label-float">
+                <input type="text" id="ReceberFisico" placeholder=""required>
+                <label id="labelReceberFisico" for="ReceberFisico">Aceita Receber Físico?</label>
+            </section>
+        
+            <section class="cadastrarCampanha">
+                
+                <button class="botao" onclick="cadastrar()">Cadastrar Campanha</button>
+
+                <button class="botao" onclick="sair()">Sair</button>
+
+            </section>
+        </section>
+    <script src="CadastroCampanha.js"></script>
+    </main>
+   
+</body>
+</html>
