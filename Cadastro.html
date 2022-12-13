@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"> 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.1.2/axios.min.js"></script>
+    <script>
+        const http = axios.create({
+            baseURL: 'http://joao92-001-site1.btempurl.com/',
+            timeout: 1000
+        });
+    </script>
+</head>
+<body>
+    <header class="cabecalho">
+        <img
+          class="cabecalhoImagem"
+          src="https://tse4.mm.bing.net/th?id=OIP.rvwQd_ckRwlxOJl03hR4JAAAAA&pid=Api&P=0"
+          alt=""
+        />
+        <nav>
+          <a href="paginaInicial.html" class="btn">Página Inicial</a>
+          <a href="sobre.html" class="btn">Sobre Nós</a>
+          <a href="doacao.html" class="btn">Faça Uma Doção</a>
+        </nav>
+        <a href="Login.html" class="btn">Login</a>
+    </header>
+    <main class="container">
+        <section class="card">
+           <h1>Cadastrar</h1>
+           <section id="msgError"></section>
+           <section id="msgSuccess"></section>
+
+
+           <section class="label-float">
+            <input type="text" id="RazaoSocial" placeholder=""required>
+            <label id="labelusuario" for="RazaoSocial">Razao Social</label>
+            </section>
+
+           <section class="label-float">
+            <input type="text" id="NomeFantasia" placeholder=""required>
+            <label id="labelusuario" for="NomeFantasia">Nome Fantasia</label>
+            </section>
+
+            <section class="label-float">
+                <input type="number" id="CNPJ" placeholder=""required>
+                <label id="labelusuario" for="usuario">CNPJ</label>
+            </section>
+
+            <section class="label-float">
+                <input type="date" id="Fundacao" placeholder=""required>
+                <label id="labelusuario" for="Fundacao">Data de Fundação</label>
+            </section>
+
+            <section class="label-float">
+                <input type="text" id="Endereco" placeholder=""required>
+                <label id="labelusuario" for="Endereco">Endereço</label>
+            </section>
+
+            <section class="label-float">
+                <input type="text" id="Cidade" placeholder=""required>
+                <label id="labelusuario" for="Cidade">Cidade</label>
+            </section>
+
+            <section class="label-float">
+                <input type="text" id="Estado" placeholder=""required>
+                <label id="labelusuario" for="Estado">Estado(UF)</label>
+            </section>
+
+            <section class="label-float">
+                <input type="number" id="CEP" placeholder=""required>
+                <label id="labelusuario" for="CEP">CEP</label>
+            </section>
+
+            <section class="label-float">
+                <input type="text" id="Pais" placeholder=""required>
+                <label id="labelusuario" for="Pais">Pais</label>
+            </section>
+
+            <section class="label-float">
+                <input type="number" id="Telefone" placeholder=""required>
+                <label id="labelusuario" for="Telefone">Telefone-(DD+Numero)</label>
+            </section>
+
+            <section class="label-float">
+                <input type="email" id="Email" placeholder=""required>
+                <label id="labelusuario" for="Email">E-mail</label>
+            </section>
+
+            <section class="label-float">
+                <input type="password" id="senha" placeholder=""required>
+                <label id="labelsenha" for="senha">Senha</label>
+                <i id="versenha" class="fa fa-eye" aria-hidden="true"></i>
+            </section>
+
+            <section class="label-float">
+                <input type="password" id="confirmesenha" placeholder=""required>
+                <label id="labelconfirmesenha" for="confirmesenha">Confirmar Senha</label>
+                <i id="verconfirmesenha" class="fa fa-eye" aria-hidden="true"></i>
+            </section>
+
+            <section class="justify-center">
+                <button onclick="cadastrar()">Cadastrar</button>
+            </section>
+        </section>
+    <script src="Cadastro.js"></script>
+    </main>
+    <footer class="rodape">
+        <nav class="cabecalhoMenu">
+          <a href="privacidade.html" class="btn btn-sucess">Política de Privacidade</a>
+          <a href="termo.html" class="btn btn-sucess">Termo de Uso</a>
+          <a href="contato.html" class="btn">Entre em Contato com Nós</a>
+        </nav>
+      </footer>
+</body>
+</html>

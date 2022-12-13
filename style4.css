@@ -1,0 +1,90 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+:root{
+    --cor-primaria : #EB2D14;
+    --cor-secundaria : #686B6A;
+    --cor-terciaria : black;
+    --cor-quaternaria : #E4EBE8;
+    --cor-padrao : #9E281A;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family:'Roboto', sans-serif;
+}
+.cabecalho{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background-image: linear-gradient(to right,var(--cor-padrao),var(--cor-padrao));
+    gap: 160px;
+}
+.cabecalhoImagem{
+ 
+  height: 110px; 
+  width: 200px;  
+}
+.cabecalhoMenu{
+    display: flex;
+    gap: 160px;
+}
+.btn{
+    justify-content: space-around;
+    border: none;
+    padding: 10px;
+    text-decoration: none;
+    cursor: pointer;
+}
+.btn-sucess{
+    justify-content: space-around;
+    background-image: linear-gradient(to right,var(--cor-quaternaria),var(--cor-quaternaria));
+    outline:  none;
+    color:linear-gradient(to right,var(--cor-primaria),var(--cor-primaria))
+}
+main img{
+    justify-content: space-around;
+    width: 50%;
+    display: block;
+    margin: auto;
+}
+.rodape{
+    display: flex;
+    align-items: center;
+    position: absolute;
+    background-image: linear-gradient(to right,var(--cor-padrao),var(--cor-padrao));
+    gap: 160px;
+    width: 100%;
+    bottom: 1px;
+    
+}
+footer button{
+    display:inline-block;
+    padding: 10px;
+    border: none;
+    font-size: 50px;  
+    margin-top: 15px;
+    position: absolute;
+
+}
+
+a{
+    color: var(--cor-padrao);
+    font-weight: bold;
+    text-decoration: none;
+    transition: all .4s ease-out;
+}
+a:hover{
+    color:var(--cor-primaria);
+    
+}
+body{
+    background-image: linear-gradient(to right,var(--cor-primaria),var(--cor-primaria));
+   background-repeat: no-repeat;
+   background-size:cover;
+   background-attachment: fixed;
+}
+
+
+
+
+

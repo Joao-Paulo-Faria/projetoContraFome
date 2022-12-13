@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.1.2/axios.min.js"></script>
+    <script>
+      const http = axios.create({
+        baseURL: "http://joao92-001-site1.btempurl.com/"
+        //timeout: 10000,
+      });
+    </script>
+    <script>
+      const fKey = (key) =>
+        (function until(value, comp = value) {
+          const result = value.replace(/\.([A-z0-9]*)(\.|$)/, "[$1]$2");
+
+          return comp !== result ? until(result, value) : result;
+        })(key);
+
+      function populateFormData(values, form = new FormData(), base = "") {
+        Object.keys(values).forEach((key) => {
+          const value = values[key];
+
+          if (
+            typeof value == "string" ||
+            typeof value == "number" ||
+            typeof value == "boolean" ||
+            value instanceof File ||
+            value instanceof Blob
+          ) {
+            form.append(fKey(`${base}${key}`), value);
+          } else if (typeof value == "object") {
+            populateFormData(value, form, `${base}${key}.`);
+          }
+        });
+
+        return form;
+      }
+    </script>
+  </head>
+  <body>
+    <header class="cabecalho">
+      <img
+        class="cabecalhoImagem"
+        src="https://tse4.mm.bing.net/th?id=OIP.rvwQd_ckRwlxOJl03hR4JAAAAA&pid=Api&P=0"
+        alt=""
+      />
+      <nav>
+        <a href="paginaInicial.html" class="btn">Página Inicial</a>
+        <a href="sobre.html" class="btn">Sobre Nós</a>
+        <a href="doacao.html" class="btn">Faça Uma Doção</a>
+      </nav>
+      <a href="Login.html" class="btn">Login</a>
+    </header>
+    <main class="container">
+      <div id="listaEstados"></div>
+      <section class="card">
+        <h1>Entrar</h1>
+        <section id="msgCarregando"></section>
+        <section class="label-float">
+          <input type="text" id="cnpj" placeholder="" required />
+          <label id="cnpjlabel" for="cnpj">CNPJ</label>
+        </section>
+
+        <section class="label-float">
+          <input type="password" id="senhalog" placeholder="" required />
+          <label id="senhalabel" for="senha">Senha</label>
+          <i class="fa fa-eye" aria-hidden="true"></i>
+        </section>
+
+        <section class="justify-center">
+          <button onclick="entrar()">Entrar</button>
+        </section>
+
+        <section class="justify-center">
+          <hr/>
+        </section>
+        <!-- <section id="msgacesso"></section> -->
+        <section class="nao-tem-conta">
+          <p>Não tem uma conta?</p>
+          <a href="Cadastro.html">Cadastre-se</a>
+        </section>
+      </section>
+    </main>
+    <footer class="rodape">
+      <nav>
+        <a href="privacidade.html" class="btn">Política de Privacidade</a>
+        <a href="termo.html" class="btn">Termo de Uso</a>
+        <a href="contato.html" class="btn">Entre em Contato com Nós</a>
+      </nav>
+    </footer>
+  <script src="Login.js"></script>
+  </body>
+</html>

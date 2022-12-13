@@ -1,0 +1,30 @@
+@media only screen and (min-width: 900px) and (max-width: 1200px){
+    /* .menu { width:100%; } */
+    }
+.box {
+    width: 1920px;
+    height: 700px;    
+    margin: 0px;
+    border: 0px;
+    display: inline-block;
+    position: fixed;        
+  }
+
+  .imagem {
+    background-image: url(http://custom-images.strikinglycdn.com/res/hrscywv4p/image/upload/c_limit,fl_lossy,h_1500,w_2000,f_auto,q_auto/7769085/478626_95108.png);
+    background-color: #fff;
+    color: #000;
+    background-size: 100%;
+    vertical-align: middle;
+    background-position: 10% 20%;
+    position: fixed;
+  }
+  
+  .teste{
+    width: 900px;
+    position: absolute;
+    right: 20%;
+    padding-top: 50px;
+    position: fixed;
+
+  }

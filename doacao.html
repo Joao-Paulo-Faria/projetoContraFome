@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Faça Uma Doção</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.1.2/axios.min.js"></script>
+    <script>
+      const http = axios.create({
+        baseURL: "http://joao92-001-site1.btempurl.com/"
+        //timeout: 100000,
+      });
+    </script>
+    <style>
+      #listaRegistros{display: none;}
+       #CadastroRegistro{
+           display: none;
+           flex-direction: column;
+           gap:10px;
+       }
+
+       body[page=lista] #listaRegistros{ 
+           display: block;
+       }
+       body[page=cadastro] #CadastroRegistro{ 
+           display: block;
+       }
+       table{
+           width: 100%;
+           border-collapse: collapse;
+       }
+       table th,
+       table td{
+           font-size: 14px;
+           padding: 10px 15px;
+           border: solid 1px black;
+       }
+
+       input{
+           border: solid 1px;
+           border-radius: 4px;
+       }
+       .label>div{
+           display: flex;
+       }
+       .label>div>input{
+           flex:1;
+       }
+       button.vermelho{
+           background-color:rgb(227, 85, 85);
+           font-size: large;
+           cursor: pointer;
+       }
+       button.verde{
+           background-color:rgb(10, 238, 10);
+           font-size: large;
+           cursor: pointer;
+           
+       }
+
+   </style>
+  </head>
+  <body page='lista' class="bodyGerenciar">
+    <header class="cabecalho">
+      <img
+        class="cabecalhoImagem"
+        src="https://tse4.mm.bing.net/th?id=OIP.rvwQd_ckRwlxOJl03hR4JAAAAA&pid=Api&P=0"
+        alt=""
+      />
+      <nav>
+        <a href="paginaInicial.html" class="btn">Página Inicial</a>
+        <a href="sobre.html" class="btn">Sobre Nós</a>
+        <a href="doacao.html" class="btn">Faça Uma Doção</a>
+      </nav>
+      <a href="Login.html" class="btn">Login</a>
+    </header>
+    <main>
+      <h2 class="h3Ponto">CAMPANHAS:</h2>    
+      <section id="msgCarregando"></section>
+      <div id="listaRegistros">
+          <table>
+              <thead>
+                  <tr>
+                      <th>Nome da Ong</th>
+                      <th>Nome da Campanha</th>
+                      <!--<th>Usuário</th>
+                      <th>Fone</th>-->
+                      <th>Detalhes e Doação</th> 
+                  </tr>
+
+              </thead>
+              <tbody id="listaRegistrosBody"></tbody>
+
+          </table>
+
+      </div>
+      <script src=doacao.js></script>
+    </main>
+     
+     <footer class="rodape">
+      <nav>
+        <a href="privacidade.html" class="btn">Política de Privacidade</a>
+        <a href="termo.html" class="btn">Termo de Uso</a>
+        <a href="contato.html" class="btn">Entre em Contato com Nós</a>
+      </nav>
+    </footer>
+    
+  </body>
+</html>
+

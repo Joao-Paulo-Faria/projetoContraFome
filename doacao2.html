@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css"/>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.1.2/axios.min.js"></script>
+    <title>Faça Uma Doção</title>
+    <script>
+        const http = axios.create({
+            baseURL: 'http://joao92-001-site1.btempurl.com/',
+            timeout: 1000
+        });
+    </script>
+   
+</head>
+<body>
+    <br>
+    <br>
+    <button class="sairinfo" onclick="sair()">
+        Voltar
+    </button>
+    <main class="container">
+       
+        <section class="content">
+            <h1 class="facaDoacao">Faça sua Doação</h1>
+           
+            <br>
+            <h2 class="doar">Doar por meio de</h2>
+            <br>
+            <input class ="inputdoacao" type="radio" id="doacaopix" name="forma-de-doacao" value="pix">
+            <label class="doacao" id="doacaopix" for="doacaopix">Pix</label>
+            <br>
+            <input class="inputcc" type="radio" id="credito" name="forma-de-doacao" value="credito">
+            <label class="labelcc" for="credito">Cartão de Crédito</label>
+            <br>
+            <br>
+            <label class="labelvalor" for="credito">Valor(Apenas valores inteiros)</label>
+            <input class="textvalor" type="text" oninput="this.value = this.value.replace(/[^0-9]/g, '').replace(/(\..*?)\..*/g, '$1');" id="valor" name="forma-de-doacao">
+            <br>
+            <br>
+            <br>
+            <input class="botao" onclick="final()" type="submit" value="Realizar Doação"/>
+          
+        </section>
+    </main>
+    <script src="doacao2.js"></script>
+</body>
+</html>
